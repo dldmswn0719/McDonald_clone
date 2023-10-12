@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+/* *{font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif; color: rgb(128, 128, 128);} */
+*{font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif;}
+
+@font-face {
+    font-family:SpeedeeK;
+    font-weight:400;
+    font-style:normal;
+    src: url(./fonts/Speedee_K_L.eot);
+    src: url(./fonts/Speedee_K_L.eot#iefix) format('embedded-opentype'),
+         url(./fonts/Speedee_K_L.woff) format('woff'),
+         url(./fonts/Speedee_K_L.ttf) format('truetype'),
+         url(./fonts/Speedee_K_L.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:500;
+    font-style:normal;
+    src: url(./fonts/Speedee_K_R.eot);
+    src: url(./fonts/Speedee_K_R.eot#iefix) format('embedded-opentype'),
+         url(./fonts/Speedee_K_R.woff) format('woff'),
+         url(./fonts/Speedee_K_R.ttf) format('truetype'),
+         url(./fonts/Speedee_K_R.svg#webfont) format('svg')}
+  @font-face {
+    font-family:SpeedeeK;
+    font-weight:600;
+    font-style:normal;
+    src: url(./fonts/Speedee_K_B.eot);
+    src: url(./fonts/Speedee_K_B.eot#iefix) format('embedded-opentype'),
+         url(./fonts/Speedee_K_B.woff) format('woff'),
+         url(./fonts/Speedee_K_B.ttf) format('truetype'),
+         url(./fonts/Speedee_K_B.svg#webfont) format('svg')}
