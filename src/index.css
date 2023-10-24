@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{margin: 0; padding: 0;}
-ul,li{list-style: none;}
-a{text-decoration: none; color: black;}
-
-/* *{font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif; color: rgb(128, 128, 128);} */
-*{font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif;}
-
 @font-face {
     font-family:SpeedeeK;
     font-weight:400;
@@ -36,3 +29,54 @@ a{text-decoration: none; color: black;}
          url(./fonts/Speedee_K_B.woff) format('woff'),
          url(./fonts/Speedee_K_B.ttf) format('truetype'),
          url(./fonts/Speedee_K_B.svg#webfont) format('svg')}
+
+*{margin: 0; padding: 0; font-family: SpeedeeK, Malgun Gothic,'맑은 고딕', Dotum,'돋움', Arial, sans-serif;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+.swiper-button-prev::after{content: ""!important; left: 0; position: absolute; top: 50%; width: 90px; height: 90px; margin-top: -48px;
+     overflow: hidden; background: url(../public/Images/bg_swiper_new.png) 0 0 no-repeat;}
+.swiper-button-next::after{content: ""!important; right: 0; position: absolute; top: 50%; width: 90px; height: 90px; margin-top: -48px;
+     overflow: hidden; background: url(../public/Images/bg_swiper_new.png) 0 -90px no-repeat;}
+
+.swiper-cus-pagination{
+     position: absolute;
+     bottom: 27px;
+     left: 51%;
+     display: flex;
+     transform: translateX(-50%);
+     height: 6px;
+     z-index: 99;
+     }
+
+.swiper-cus-pagination .progress{
+     width: 300px; height: 6px; background-color: #fff; position: relative; border-radius: 5px;
+     bottom: 4px; left: 16px;
+}
+
+.swiper-cus-pagination .progress::after{
+     content: "";
+     width: 0%; height: 6px; background-color: #ffbc0d;
+     position: absolute; left: 0; top: 0; border-radius: 5px;
+}
+.swiper-cus-pagination .pause{
+     width: 36px; height: 36px; background: url("../public/Images/bg_swiper_new.png") -92px -36px no-repeat;
+     border: none; position: absolute; top: -20px; cursor: pointer; left: -51px;
+}
+
+.swiper-cus-pagination .play{
+     background-position-y: 0;
+}
+
+.swiper-cus-pagination .progress.on::after{
+     transition: 5.5s; width: 100%;
+}
+
+
+
+
+
+.facebook{background: url(../public/Images/ico_sns.png) 0 0 no-repeat; width: 40px; height: 40px; overflow: hidden; }
+.instagram{background: url(../public/Images/ico_sns.png) 0 -40px no-repeat; width: 40px; height: 40px; overflow: hidden; }
+.youtube{background: url(../public/Images/ico_sns.png) 0 -80px no-repeat; width: 40px; height: 40px; overflow: hidden; }
+.kakaostory{background: url(../public/Images/ico_sns.png) 0 -120px no-repeat; width: 40px; height: 40px; overflow: hidden; }
