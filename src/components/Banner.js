@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Navigation , Pagination } from "swiper/modules";
 
 function Banner() {
 
@@ -54,33 +54,30 @@ function Banner() {
         <>
             <div className="w-full relative">
                 <div className="w-[calc(100%-4px)] mx-[2px]">
-                <Swiper
-                spaceBetween={0}
-                slidesPerView={1}
-                loop={true}
-                autoplay={{
-                    delay: 6000,
-                    disableOnInteraction: false,
-                }}
-                navigation={{clickable: true}}
-                modules={[Autoplay, Navigation]}
-                
-                id='swiper'
-                >
-                {
-                    BannerImg.map((e,i)=>{
-                        return (
-                            <SwiperSlide key={i} className='relative'>
-                                <img src={e.img} alt={e.title} />
-                            </SwiperSlide>
-                        )
-                    })
-                }
-                <div className="swiper-cus-pagination">
-                    <button className='pause'></button>
-                    <div className="progress"></div>
-                </div>
-            </Swiper>
+                    <Swiper
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={{clickable: true}}
+                    pagination={{clickable: true}}
+                    modules={[Autoplay, Navigation ,Pagination]}
+                    
+                    id='swiper'
+                    >
+                        {
+                            BannerImg.map((e,i)=>{
+                                return (
+                                    <SwiperSlide key={i} className='relative'>
+                                        <img src={e.img} alt={e.title} />
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
+                    </Swiper>
                 </div>
             </div>
         </>

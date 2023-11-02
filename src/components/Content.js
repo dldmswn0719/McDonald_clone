@@ -74,33 +74,33 @@ function Content() {
     return (
         <>
             <div className="w-full relative bg-[#fbfbfb] pb-16">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className='ml-9 pt-8 mb-16 text-4xl font-semibold text-[#292929]'>McDonald's LIVE</h2>
-                    <div className="flex flex-wrap justify-start">
-                        {
-                            ContentItem.slice(0,visible).map((e,i)=>{
-                                return(
-                                    <ul key={i} className='ml-9 mb-9 w-[366px] h-[438px] shadow-[0_3px_4px_rgba(0,0,0,0.1)] rounded-xl'>
-                                        <li>
-                                            <img className='rounded-[12px_12px_0_0]' src={e.img} alt={e.desc} />
-                                        </li>
-                                        <li className='px-6 py-8 text-[#292929] font-medium text-lg'>
-                                            <p>{e.desc}</p>
-                                            <p>{e.desc2}</p>
-                                        </li>
-                                    </ul>
-                                )
-                            })
-                        }
-                    </div>
-                    {
-                        visible < ContentItem.length &&
-                        <div className="mt-20 flex justify-center">
-                            <button onClick={MoreItems}>
-                                <img src="./../Images/btn_more.png" alt="btn_more" />   
-                            </button>
+                <div className="max-w-7xl mx-auto flex flex-wrap justify-between px-5">
+                    <h2 className='pt-8 mb-16 text-4xl font-semibold text-[#292929]'>McDonald's LIVE</h2>
+                        <div className=" flex flex-wrap justify-between">
+                            {
+                                ContentItem.slice(0,visible).map((e,i)=>{
+                                    return(
+                                        <div className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-4">
+                                            <div key={i} className='shadow-[0_3px_4px_rgba(0,0,0,0.1)] rounded-xl h-[440px]'>
+                                                <img className='w-full rounded-[12px_12px_0_0]' src={e.img} alt={e.desc} />
+                                                <div className="p-4">
+                                                    <p>{e.desc}</p>
+                                                    <p>{e.desc2}</p>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    )
+                                })
+                            }
                         </div>
-                    }
+                        {
+                            visible < ContentItem.length &&
+                            <div className="mt-20 flex mx-auto justify-center">
+                                <button onClick={MoreItems}>
+                                    <img src="./../Images/btn_more.png" alt="btn_more" />   
+                                </button>
+                            </div>
+                        }
                 </div>
             </div>
         </>
